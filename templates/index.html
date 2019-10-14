@@ -8,38 +8,19 @@
     </style>
     <meta charset="UTF-8">
     <title>HomePage</title>
-
 </head>
 <body>
-<table>
-  <tr>
-    <th>Employee ID </th>
-    <th>Name</th>
-    <th>Role</th>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
-<div class="Button">
-        <h1>Employee Enroll</h1>
-        <form class="add employee">
-        <label for="EmployeeID" class="sr-only">EmployeeID</label>
-        <input type="EmployeeID" name="EmployeeID" id="EmployeeID" class="form-control" placeholder="EmployeeID" required autofocus>
-        <label for="inputName" class="sr-only">Name</label>
-        <input type="name" name="inputName" id="inputName" class="form-control" placeholder="Name" required autofocus>
-        <label for="Role" class="sr-only">Role</label>
-        <input type="Role" name="Role" id="Role" class="form-control" placeholder="Role" required>
+<form action = "{{ url_for('addrec') }}" method = "POST">
+         <h3>Student Information</h3>
+         EmployeeID<br>
+         <input type = "text" name = "EmployeeID" /></br>
 
-        <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button">Update</button>
-      </form>
-      </div>
+         Name<br>
+         <textarea name = "name" ></textarea><br>
+
+         Role<br>
+         <input type = "text" name = "Role" /><br>
+         <input type = "submit" value = "submit" /><br>
+    </form>
 </body>
 </html>
