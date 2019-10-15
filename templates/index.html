@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>HomePage</title>
-</head>
-<body>
-<form action = "{{ url_for('add') }}" method = "POST">
+<!doctype html>
+<html>
+   <body>
+   <form action = "{{ url_for('add') }}" method = "POST">
          <h3>Employee Information</h3>
          EmployeeID<br>
          <input type = "text" name = "EmployeeID" /></br>
@@ -15,7 +11,23 @@
 
          Role<br>
          <input type = "text" name = "Role" /><br>
-         <input type = "submit" value = "submit" /><br>
+         <input type = "submit" value = "ADD" /><br>
     </form>
-</body>
+    <table border = 1>
+         <thead>
+            <td>EmployeeID</td>
+            <td>Name</td>
+            <td>Role</td>
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row["EmployeeID"]}}</td>
+               <td>{{row["name"]}}</td>
+               <td> {{ row["Role"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+      result of addition : {{ msg }}
+   </body>
 </html>

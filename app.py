@@ -37,7 +37,7 @@ def add():
             cur = con.cursor()
             cur.execute("select * from Employee")
             rows = cur.fetchall();
-            return render_template("result.html", msg=msg,rows=rows)
+            return render_template("index.html", msg=msg,rows=rows)
             con.close()
 if __name__ == "__main__":
     app.debug = True
