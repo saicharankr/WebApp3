@@ -1,6 +1,21 @@
 <!doctype html>
 <html>
    <body>
+    <table border = 1>
+         <thead>
+            <td>EmployeeID</td>
+            <td>Name</td>
+            <td>Role</td>
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row["EmployeeID"]}}</td>
+               <td>{{row["name"]}}</td>
+               <td> {{ row["Role"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
       result of addition : {{ msg }}
       <h2><a href = "\">go back to home page</a></h2>
    </body>

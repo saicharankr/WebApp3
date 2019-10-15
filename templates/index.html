@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-    table, th, td {
-  border: 1px solid black;
-}
-    </style>
     <meta charset="UTF-8">
     <title>HomePage</title>
 </head>
 <body>
-<form action = "{{ url_for('addrec') }}" method = "POST">
-         <h3>Student Information</h3>
+<form action = "{{ url_for('add') }}" method = "POST">
+         <h3>Employee Information</h3>
          EmployeeID<br>
          <input type = "text" name = "EmployeeID" /></br>
 
          Name<br>
-         <textarea name = "name" ></textarea><br>
+         <input type = "text" name = "name" /><br>
 
          Role<br>
          <input type = "text" name = "Role" /><br>
